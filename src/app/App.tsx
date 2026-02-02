@@ -21,6 +21,8 @@ import { ArrowLeft } from 'lucide-react'; // Importando ícone de volta
 
 import { Roles } from './pages/Roles';
 import { Employees } from './pages/Employees';
+import { Profile } from './pages/Profile';
+import { Holerite } from './pages/Holerite';
 
 // 1. Layout de Autenticação (Com botão de voltar ao site)
 function AuthLayout() {
@@ -100,6 +102,9 @@ export default function App() {
             <Route path="/deletarunidade/:id" element={<DeletarUnidade />} />
             <Route path="/cargos" element={<Roles />} />
             <Route path="/colaboradores" element={<Employees />} />
+            <Route path="/perfil" element={<Profile />} />
+            <Route path="/holerite" element={<Holerite />} />
+            
           </Route>
 
           <Route path="*" element={<NotFound />} />
