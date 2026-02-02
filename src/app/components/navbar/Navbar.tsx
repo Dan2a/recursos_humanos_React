@@ -1,10 +1,10 @@
 import { useState, useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
-import { 
-    Briefcase, ChevronLeft, ChevronRight, FileText, 
-    LayoutDashboard, LogOut, MapPin, 
-    Settings, User, Users 
+import {
+    Briefcase, ChevronLeft, ChevronRight, FileText,
+    LayoutDashboard, LogOut, MapPin,
+    Settings, User, Users
 } from "lucide-react";
 
 function Navbar() {
@@ -20,7 +20,6 @@ function Navbar() {
         { icon: Users, label: 'Colaboradores', path: '/colaboradores' },
         { icon: FileText, label: 'Holerite', path: '/holerite' },
         { icon: User, label: 'Meu Perfil', path: '/perfil' },
-        { icon: Settings, label: 'Configurações', path: '/configuracoes' },
     ];
 
     function logout() {
@@ -31,7 +30,7 @@ function Navbar() {
     return (
         // Mudança: h-screen fixa a altura na tela. sticky mantém ela parada no scroll.
         <aside className={`sticky top-0 h-screen bg-white border-r border-gray-200 transition-all duration-300 flex flex-col ${isExpanded ? "w-64" : "w-20"}`}>
-            
+
             {/* Botão Toggle */}
             <button
                 onClick={() => setIsExpanded(!isExpanded)}
@@ -42,10 +41,10 @@ function Navbar() {
 
             {/* Container Interno: h-full e flex-col são essenciais aqui */}
             <div className="p-4 flex flex-col h-full overflow-y-auto no-scrollbar">
-                
+
                 {/* Logo */}
                 <div className={`mb-8 flex justify-center h-8 transition-all ${!isExpanded && 'opacity-0'}`}>
-                   {isExpanded && <span className="text-[#19439E] font-bold text-xl uppercase whitespace-nowrap">Menu do Sistema</span>}
+                    {isExpanded && <span className="text-[#19439E] font-bold text-xl uppercase whitespace-nowrap">Menu do Sistema</span>}
                 </div>
 
                 {/* Nav Principal: flex-grow garante que ela ocupe o espaço do meio */}
@@ -56,9 +55,8 @@ function Navbar() {
                             <Link
                                 key={item.path}
                                 to={item.path}
-                                className={`flex items-center gap-4 p-3 rounded-lg transition-all ${
-                                    isActive ? 'bg-[#F08832]/10 text-[#F08832]' : 'text-gray-600 hover:bg-gray-50'
-                                }`}
+                                className={`flex items-center gap-4 p-3 rounded-lg transition-all ${isActive ? 'bg-[#F08832]/10 text-[#F08832]' : 'text-gray-600 hover:bg-gray-50'
+                                    }`}
                             >
                                 <item.icon size={24} className="shrink-0" />
                                 {isExpanded && <span className="font-medium whitespace-nowrap">{item.label}</span>}
