@@ -13,7 +13,7 @@ function Unidades() {
           </div>
 
           <Link 
-            to="/cadastrarunidade" 
+            to="/unidades/cadastrar" 
             className="flex items-center gap-2 bg-[#F08832] hover:bg-[#d97728] text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-orange-100 transition-all active:scale-95"
           >
             <Plus size={20} />

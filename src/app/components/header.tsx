@@ -10,10 +10,10 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-[#F08832] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">RH</span>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+              <img src="https://ik.imagekit.io/g3sqiqtmtf/People_Flow_logo_transp.png" alt="Logo" className="h-10 w-10" />
             </div>
-            <span className="text-xl font-semibold text-gray-900">Sistema RH</span>
+            <span className="text-2xl font-bold text-[#19439E] leading-tight">People Flow</span>
           </div>
 
           {/* Desktop Navigation */}
