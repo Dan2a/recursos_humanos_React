@@ -18,8 +18,9 @@ import DeletarUnidade from './components/unidades/deletarunidade/DeletarUnidade'
 import Head from './components/head/Head';
 import { ArrowLeft } from 'lucide-react'; // Importando ícone de volta
 
-import { Colaboradores } from './components/colaboradores/Colaboradores';
+
 import { Roles } from './pages/Roles';
+import { Employees } from './pages/Employees';
 
 // 1. Layout de Autenticação (Com botão de voltar ao site)
 function AuthLayout() {
@@ -98,7 +99,7 @@ export default function App() {
             <Route path="/editarunidade/:id" element={<FormUnidade />} />
             <Route path="/deletarunidade/:id" element={<DeletarUnidade />} />
             <Route path="/cargos" element={<Roles />} />
-            <Route path="/colaboradores" element={<Colaboradores />} />
+            <Route path="/colaboradores" element={<Employees />} />
           </Route>
 
           <Route path="*" element={<NotFound />} />

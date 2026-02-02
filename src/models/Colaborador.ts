@@ -1,3 +1,6 @@
+import { Cargo } from "./Cargo";
+import Unidade from "./Unidade";
+
 export interface Colaborador {
   id?: number;
   nome: string;
@@ -5,6 +8,6 @@ export interface Colaborador {
   data_admissao: string;
   salario_base: number | string;
   acrescimo?: number | string;
-  unidade?: any; 
-  cargo?: any;   
+  unidade?: Unidade; 
+  cargo?: Cargo;   
 }
